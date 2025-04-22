@@ -49,8 +49,7 @@ void helloWorld()
   display.setTextColor(GxEPD_BLACK);
   int16_t tbx, tby;
   uint16_t tbw, tbh;
-  display.getTextBounds(HelloWorld, 0, 0, &tbx, &tby, &tbw, &tbh); // get the bounding box
-  Serial.printf("bounds helloworld : %d %d %d %d \n", tbx, tby, tbw, tbh);
+  display.getTextBounds(HelloWorld, 0, 0, &tbx, &tby, &tbw, &tbh);
   // Serial.print(display.getTextBounds(HelloWorld, 0, 0, &tbx, &tby, &tbw, &tbh));
   // center the bounding box by transposition of the origin:
   // uint16_t x = ((display.width() - tbw) / 2) - tbx;
@@ -76,11 +75,11 @@ void helloWorld()
     display.print(HelloWeACtStudi);
   } while (display.nextPage());
 }
-void helloFullScreenPartialMode2()
+void helloFullScreenPartialMode()
 {
   Serial.println("helloFullScreenPartialMode");
 }
-void helloFullScreenPartialMode()
+void helloFullScreenPartialMode2()
 {
   // Serial.println("helloFullScreenPartialMode");
   const char fullscreen[] = "full screen update";
